@@ -38,7 +38,7 @@ clc
 addpath(genpath('.'));
 ```
 
-📌 Measuring Diameter in Synthetic Image
+📌 **Measuring Diameter in Synthetic Image**
 ```matlab
 im = imread('synthetics/yeni_30_255_25_gauss_0.5bmp');
 result = subpixel_counting_method(im, 'intermediate', 9, 'mean');
@@ -47,16 +47,21 @@ result = subpixel_counting_method(im, 'intermediate', 9, 'mean');
 `intermediate`: Derivative-based edge method\
 `mean`: Averaging type
 
-📌 Preprocessing Step
+🧹 **Preprocessing Step**
+
+In the preprocessing step, objects in the image are detected using a connected component-based algorithm. It is assumed that the largest connected component corresponds to the actual workpiece. All other components (typically noise or irrelevant objects) are removed from the image.
+The removed areas are then filled with background values to restore image consistency and prepare the data for accurate diameter estimation.
 
 **Input Image:**
+
 ![Input](raw_image.png)
 
 **After Preprocessing:**
+
 ![Cleaned Image](preprocessed_image.png)
 
 
-📌 Measuring Diameter in Real Image (with preprocessing)
+📌 **Measuring Diameter in Real Image (with preprocessing)**
 ```matlab
 th = 254;
 im = imread('real/im_real.bmp');
@@ -68,7 +73,7 @@ im_filled = imcomplement(imfill(imcomplement(im_desired)));
 result2 = subpixel_counting_method(im_filled, 'intermediate', 9, 'mean');
 ```
 
-🧠 Main Function Overview
+🧠 **Main Function Overview**
 ```matlab
 subpixel_counting_method(im, edge_method, numberofmaxk, average_type)
 ```
@@ -81,7 +86,7 @@ Computes intensity thresholds using edge-based analysis.\
 Applies subpixel estimation using calculated bounds.\
 Returns the estimated outer diameter.
 
-🛠️ Calibration Options
+🛠️ **Calibration Options**
 
 You may use either:
 
@@ -91,11 +96,11 @@ You may use either:
 
 If manual control is desired, see `calibration_for_subpixel_counting.m`.
 
-📜 License
+📜 **License**
 
 This project is licensed under the MIT License.
 
-👤 Author
+👤 **Author**
 
 Developed by Ahmet Gökhan Poyraz
 

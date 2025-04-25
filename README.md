@@ -53,7 +53,7 @@ result = subpixel_counting_method(im, 'intermediate', 9, 'mean');
 ![Input](raw_image.png)
 
 **After Preprocessing:**
-![Cleaned Image](cleaned_image.png)
+
 
 
 📌 Measuring Diameter in Real Image (with preprocessing)

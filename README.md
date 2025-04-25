@@ -47,6 +47,15 @@ result = subpixel_counting_method(im, 'intermediate', 9, 'mean');
 `intermediate`: Derivative-based edge method\
 `mean`: Averaging type
 
+📌 Preprocessing Step
+
+**Input Image:**
+![Input](raw_image.png)
+
+**After Preprocessing:**
+![Cleaned Image](cleaned_image.png)
+
+
 📌 Measuring Diameter in Real Image (with preprocessing)
 ```matlab
 th = 254;

@@ -16,20 +16,6 @@ The method is particularly useful for machine vision applications requiring **hi
 
 ---
 
-## 📁 Project Structure
-├── subpixel_counting_method.m \
-├── determine_thresholds.m \
-├── determine_thresholds_with_manual_k.m \
-├── calculation.m \
-├── eliminate_small_objects.m \
-├── real/ \
-│ └── im_real.bmp \
-├── synthetics/ \
-│ └── yeni_30_255_25_gauss_0.5bmp \
-└── example_script.m\
-
----
-
 ## 🚀 Usage
 
 ```matlab

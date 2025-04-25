@@ -1,4 +1,4 @@
-# 🧠 Subpixel Counting-Based Diameter Measurement (MATLAB)
+# 💡⚙️📐 Subpixel Counting-Based Diameter Measurement (MATLAB)
 
 This repository contains a MATLAB implementation of a **Subpixel Counting-Based Diameter Measurement Algorithm for Industrial Machine Vision**, which is capable of estimating the outer diameter of circular objects using both synthetic and real grayscale images.
 
